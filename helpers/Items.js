@@ -1,7 +1,7 @@
 import {Item} from "./Item.js";
 
 export const MASORI_CRAFTING_KIT = new Item('Masori Crafting Kit');
-export const ABYSSAL_PROTECTOR = new Item('Abysall Protector');
+export const ABYSSAL_PROTECTOR = new Item('Abyssal Protector');
 export const AHRIMS_HOOD = new Item('Ahrim\'s Hood');
 export const AHRIMS_ROBETOP = new Item('Ahrim\'s Robetop');
 export const AHRIMS_ROBE_SKIRT = new Item('Ahrim\'s Robe Skirt');
