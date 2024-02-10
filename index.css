@@ -1,0 +1,97 @@
+:root {
+    color-scheme: dark light;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1em;
+    font-family: Helvetica, sans-serif;
+}
+
+#sheet {
+    background: #3a3a3a;
+    border: 2px solid #3a3a3a;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2px;
+    width: min-content;
+    height: min-content;
+}
+
+.tile {
+    --progression: 0%;
+    position: relative;
+    background: #bbbbbb;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1;
+}
+
+.tile__progression {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(0deg, #00FF00 var(--progression), #bbbbbb var(--progression));
+}
+
+.tile:active, .tile__progression:active {
+    background: transparent;
+}
+
+.tile__heading {
+    font-size: 2em;
+    font-weight: bold;
+    color: black;
+}
+
+.tile__image {
+    cursor: pointer;
+    user-select: none;
+    pointer-events: none;
+    z-index: 1;
+    max-width: 60%;
+    max-height: 60%;
+    object-fit: contain;
+}
+
+#details {
+    padding: 0 1em;
+}
+
+#details__variations {
+    margin-top: 2em;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2em;
+}
+
+.variation {
+    background: #2a2a2a;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    gap: 0.5em;
+}
+
+.variation__input {
+    border: none;
+    padding: 0.25em 0.5em;
+}
+
+#tools {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1em;
+}
