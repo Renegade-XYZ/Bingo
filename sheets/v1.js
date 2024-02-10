@@ -31,7 +31,7 @@ import {
     DRAGON_BOOTS,
     DRAGON_HARPOON,
     DRAGON_PICKAXE,
-    ELYSIAN_SIGIL,
+    ELYSIAN_SIGIL, ENHANCED_WEAPON_SEED,
     ETERNAL_CRYSTAL,
     FANGS_OF_VENENATIS,
     GODSWORD_SHARD_1,
@@ -200,7 +200,8 @@ const wildernessWeapon = new Tile('Wilderness Weapon from Scratch', 'https://old
 ]);
 
 const crystal = new Tile('Full Crystal', 'https://oldschool.runescape.wiki/images/thumb/Crystal_armour_equipped_male.png/101px-Crystal_armour_equipped_male.png?dcf7b', [
-    new Variation(new CountableItem(CRYSTAL_ARMOUR_SEED, 6))
+    new Variation(new CountableItem(CRYSTAL_ARMOUR_SEED, 6)),
+    new Variation(new CountableItem(ENHANCED_WEAPON_SEED, 2))
 ]);
 
 const barrows = new Tile('Full Barrows', 'https://oldschool.runescape.wiki/images/thumb/Dharok%27s_armour_equipped_male.png/150px-Dharok%27s_armour_equipped_male.png?3d05c', [
@@ -282,9 +283,9 @@ const bludgeon = new Tile('Complete Bludgeon', 'https://oldschool.runescape.wiki
 ]);
 
 export const rows = [
-    [crystal, justiciar, masori, ancestral, torva],
-    [barrows, wildernessRings, godsword, spiritShield, jar],
-    [wildernessWeapon, dt2ring, goldenTench, venatorBow, kits],
-    [megarare, visage, voidwaker, wildernessShield, ballista],
-    [minigamePet, zulrah, cerberus, bludgeon, dragonTools]
+    [crystal, wildernessRings, goldenTench, wildernessShield, kits],
+    [barrows, justiciar, godsword, spiritShield, jar],
+    [wildernessWeapon, dt2ring, masori, venatorBow, dragonTools],
+    [megarare, visage, voidwaker, ancestral, ballista],
+    [minigamePet, zulrah, cerberus, bludgeon, torva]
 ];

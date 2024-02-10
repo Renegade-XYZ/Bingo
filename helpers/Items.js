@@ -136,3 +136,4 @@ export const WYVERN_VISAGE = new Item('Wyvern Visage');
 export const ZAMORAK_HILT = new Item('Zamorak Hilt');
 export const TANZANITE_MUTAGEN = new Item('Tanzanite Mutagen');
 export const MAGMA_MUTAGEN = new Item('Magma Mutagen');
+export const ENHANCED_WEAPON_SEED = new Item('Enhanced Weapon Seed');
