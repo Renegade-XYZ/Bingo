@@ -72,7 +72,7 @@ import {
     KARILS_LEATHERTOP,
     LIGHT_FRAME,
     LIL_CREATOR,
-    MAGIC_FANG,
+    MAGIC_FANG, MAGMA_MUTAGEN,
     MAGUS_VESTIGE,
     MALEDICATION_SHARD_1,
     MALEDICATION_SHARD_2,
@@ -104,7 +104,7 @@ import {
     SMOLCANO,
     SPECTRAL_SIGIL,
     SPIRIT_SHIELD,
-    TANZANITE_FANG,
+    TANZANITE_FANG, TANZANITE_MUTAGEN,
     THAMMARONS_SCEPTRE,
     TINY_TEMPOR,
     TORAGS_HAMMERS,
@@ -237,7 +237,8 @@ const venatorBow = new Tile('Venator Bow', 'https://oldschool.runescape.wiki/ima
 ]);
 
 const zulrah = new Tile('Zulrah', 'https://oldschool.runescape.wiki/images/thumb/Zulrah_%28serpentine%29.png/250px-Zulrah_%28serpentine%29.png?29a54', [
-    new Variation(new CountableItem(TANZANITE_FANG), new CountableItem(MAGIC_FANG), new CountableItem(SERPENTINE_VISAGE))
+    new Variation(new CountableItem(TANZANITE_FANG), new CountableItem(MAGIC_FANG), new CountableItem(SERPENTINE_VISAGE)),
+    new Variation(new CountableItem(TANZANITE_MUTAGEN), new CountableItem(MAGMA_MUTAGEN))
 ]);
 
 const goldenTench = new Tile('Golden Tench', 'https://oldschool.runescape.wiki/images/thumb/Golden_tench_detail.png/130px-Golden_tench_detail.png?27700', [
