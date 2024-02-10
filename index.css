@@ -1,5 +1,5 @@
 :root {
-    color-scheme: dark light;
+    color-scheme: dark;
 }
 
 * {
@@ -94,4 +94,9 @@ body {
     flex-flow: row wrap;
     justify-content: center;
     gap: 1em;
+}
+
+#tools__export, #tools__import {
+    color: white;
+    background-color: #2a2a2a;
 }
