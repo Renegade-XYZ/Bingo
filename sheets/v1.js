@@ -30,7 +30,7 @@ import {
     DRAGON_AXE,
     DRAGON_BOOTS,
     DRAGON_HARPOON,
-    DRAGON_PICKAXE,
+    DRAGON_PICKAXE, DRAGON_PICKAXE_BROKEN,
     ELYSIAN_SIGIL, ENHANCED_WEAPON_SEED,
     ETERNAL_CRYSTAL,
     FANGS_OF_VENENATIS,
@@ -248,7 +248,8 @@ const goldenTench = new Tile('Golden Tench', 'https://oldschool.runescape.wiki/i
 ]);
 
 const dragonTools = new Tile('Dragon Tools', 'https://oldschool.runescape.wiki/images/thumb/Dragon_pickaxe_detail.png/130px-Dragon_pickaxe_detail.png?4f4ee', [
-    new Variation(new CountableItem(DRAGON_PICKAXE), new CountableItem(DRAGON_HARPOON), new CountableItem(DRAGON_AXE))
+    new Variation(new CountableItem(DRAGON_PICKAXE), new CountableItem(DRAGON_HARPOON), new CountableItem(DRAGON_AXE)),
+    new Variation(new CountableItem(DRAGON_PICKAXE_BROKEN), new CountableItem(DRAGON_HARPOON), new CountableItem(DRAGON_AXE)),
 ]);
 
 const jar = new Tile('Any Jar', 'https://oldschool.runescape.wiki/images/thumb/Jar_of_souls_detail.png/90px-Jar_of_souls_detail.png?e6cf8', [

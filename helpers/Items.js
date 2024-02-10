@@ -137,3 +137,4 @@ export const ZAMORAK_HILT = new Item('Zamorak Hilt');
 export const TANZANITE_MUTAGEN = new Item('Tanzanite Mutagen');
 export const MAGMA_MUTAGEN = new Item('Magma Mutagen');
 export const ENHANCED_WEAPON_SEED = new Item('Enhanced Weapon Seed');
+export const DRAGON_PICKAXE_BROKEN = new Item('Dragon Pickaxe (broken)');
