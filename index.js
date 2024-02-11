@@ -5,6 +5,7 @@ const tileElements = Array.from(boardElement.getElementsByClassName('tile')).sli
 
 const params = new URLSearchParams(location.search);
 const sheetParam = params.get('sheet') ?? 'v1';
+const importParam = params.get('import') ?? '';
 
 import((`./sheets/${sheetParam}.js`)).then(({rows}) => {
     const addImages = () => tileElements.forEach((tileElement, index) => {
@@ -56,9 +57,20 @@ import((`./sheets/${sheetParam}.js`)).then(({rows}) => {
         });
     });
 
+    const importData = (text) => {
+        const data = JSON.parse(atob(text));
+
+        for (const [key, val] of Object.entries(data)) {
+            localStorage.setItem(key, val);
+        }
+
+        updateProgression();
+    }
+
     addImages();
     updateProgression();
     addClickHandlers();
+    importParam && importData(importParam);
 
     document.addEventListener('change', (event) => {
         const {name, value} = event.target;
@@ -68,28 +80,23 @@ import((`./sheets/${sheetParam}.js`)).then(({rows}) => {
         }
 
         localStorage.setItem(name, value);
-
         detailsVariationsElement.querySelectorAll(`.variation__input[name="${name}"]`).forEach((input) => {
             input.value = value;
         });
-
         updateProgression();
     });
 
 
     document.getElementById('tools__import').addEventListener('click', async () => {
-        const clipboardContents = await navigator.clipboard.readText();
-        const data = JSON.parse(atob(clipboardContents));
-
-        for (const [key, val] of Object.entries(data)) {
-            localStorage.setItem(key, val);
-        }
-
-        updateProgression();
+        importData(await navigator.clipboard.readText());
     });
 
     document.getElementById('tools__export').addEventListener('click', () => {
-        navigator.clipboard.writeText(btoa(JSON.stringify(localStorage)))
+        const searchParams = new URLSearchParams(location.search);
+        searchParams.set('sheet', sheetParam);
+        searchParams.set('import',  btoa(JSON.stringify(localStorage)));
+
+        navigator.clipboard.writeText(`${location.origin}${location.pathname}?${searchParams}`)
             .then(() => alert('Bingo data copied to clipboard!'), () => alert('Failed to export!'));
     });
 });
