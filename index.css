@@ -72,7 +72,7 @@ body {
     margin-top: 2em;
     display: flex;
     flex-flow: column nowrap;
-    gap: 2em;
+    gap: 1em;
 }
 
 .variation {

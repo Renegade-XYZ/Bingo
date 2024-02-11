@@ -33,7 +33,8 @@ import((`./sheets/${sheetParam}.js`)).then(({rows}) => {
             detailsTitleElement.innerText = tile.name;
             detailsVariationsElement.innerHTML = '';
 
-            for (const variation of tile.variations) {
+            for (let i = 0; i < tile.variations.length; i++) {
+                const variation = tile.variations[i];
                 const variationElement = document.createElement('div');
                 variationElement.className = 'variation';
 
@@ -53,6 +54,12 @@ import((`./sheets/${sheetParam}.js`)).then(({rows}) => {
                 }
 
                 detailsVariationsElement.appendChild(variationElement);
+
+                if (i < tile.variations.length - 1) {
+                    const orElement = document.createElement('div');
+                    orElement.innerText = 'OR';
+                    detailsVariationsElement.appendChild(orElement);
+                }
             }
         });
     });
@@ -87,7 +94,7 @@ import((`./sheets/${sheetParam}.js`)).then(({rows}) => {
     });
 
 
-    document.getElementById('tools__reset').addEventListener('click',  () => {
+    document.getElementById('tools__reset').addEventListener('click', () => {
         if (!confirm('Reset your progression?')) {
             return;
         }
@@ -101,7 +108,7 @@ import((`./sheets/${sheetParam}.js`)).then(({rows}) => {
     document.getElementById('tools__export').addEventListener('click', () => {
         const searchParams = new URLSearchParams(location.search);
         searchParams.set('sheet', sheetParam);
-        searchParams.set('import',  btoa(JSON.stringify(localStorage)));
+        searchParams.set('import', btoa(JSON.stringify(localStorage)));
 
         navigator.clipboard.writeText(`${location.origin}${location.pathname}?${searchParams}`)
             .then(() => alert('Bingo data copied to clipboard!'), () => alert('Failed to export!'));
