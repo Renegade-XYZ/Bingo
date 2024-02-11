@@ -87,8 +87,15 @@ import((`./sheets/${sheetParam}.js`)).then(({rows}) => {
     });
 
 
-    document.getElementById('tools__import').addEventListener('click', async () => {
-        importData(await navigator.clipboard.readText());
+    document.getElementById('tools__reset').addEventListener('click',  () => {
+        if (!confirm('Reset your progression?')) {
+            return;
+        }
+        detailsVariationsElement.querySelectorAll(`.variation__input`).forEach((input) => {
+            input.value = 0;
+        });
+        localStorage.clear();
+        updateProgression();
     });
 
     document.getElementById('tools__export').addEventListener('click', () => {
