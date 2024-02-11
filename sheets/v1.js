@@ -7,6 +7,7 @@ import {
     ANCESTRAL_HAT,
     ANCESTRAL_ROBE_BOTTOM,
     ANCESTRAL_ROBE_TOP,
+    ANTIFIRE_SHIELD,
     ARCANE_SIGIL,
     ARCHERS_RING,
     ARMADYL_HILT,
@@ -30,8 +31,10 @@ import {
     DRAGON_AXE,
     DRAGON_BOOTS,
     DRAGON_HARPOON,
-    DRAGON_PICKAXE, DRAGON_PICKAXE_BROKEN,
-    ELYSIAN_SIGIL, ENHANCED_WEAPON_SEED,
+    DRAGON_PICKAXE,
+    DRAGON_PICKAXE_BROKEN,
+    ELYSIAN_SIGIL,
+    ENHANCED_WEAPON_SEED,
     ETERNAL_CRYSTAL,
     FANGS_OF_VENENATIS,
     GODSWORD_SHARD_1,
@@ -72,7 +75,8 @@ import {
     KARILS_LEATHERTOP,
     LIGHT_FRAME,
     LIL_CREATOR,
-    MAGIC_FANG, MAGMA_MUTAGEN,
+    MAGIC_FANG,
+    MAGMA_MUTAGEN,
     MAGUS_VESTIGE,
     MALEDICATION_SHARD_1,
     MALEDICATION_SHARD_2,
@@ -104,7 +108,8 @@ import {
     SMOLCANO,
     SPECTRAL_SIGIL,
     SPIRIT_SHIELD,
-    TANZANITE_FANG, TANZANITE_MUTAGEN,
+    TANZANITE_FANG,
+    TANZANITE_MUTAGEN,
     THAMMARONS_SCEPTRE,
     TINY_TEMPOR,
     TORAGS_HAMMERS,
@@ -274,9 +279,9 @@ const kits = new Tile('Sweat Kits', 'https://oldschool.runescape.wiki/images/thu
 ]);
 
 const visage = new Tile('Any Visage', 'https://oldschool.runescape.wiki/images/thumb/Draconic_visage_detail.png/130px-Draconic_visage_detail.png?6edab', [
-    new Variation(new CountableItem(DRACONIC_VISAGE)),
-    new Variation(new CountableItem(SKELETAL_VISAGE)),
-    new Variation(new CountableItem(WYVERN_VISAGE)),
+    new Variation(new CountableItem(DRACONIC_VISAGE), new CountableItem(ANTIFIRE_SHIELD)),
+    new Variation(new CountableItem(SKELETAL_VISAGE), new CountableItem(ANTIFIRE_SHIELD)),
+    new Variation(new CountableItem(WYVERN_VISAGE), new CountableItem(ANTIFIRE_SHIELD)),
 ]);
 
 const bludgeon = new Tile('Complete Bludgeon', 'https://oldschool.runescape.wiki/images/thumb/Abyssal_bludgeon_detail.png/130px-Abyssal_bludgeon_detail.png?dd634', [

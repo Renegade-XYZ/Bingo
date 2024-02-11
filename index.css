@@ -96,7 +96,7 @@ body {
     gap: 1em;
 }
 
-#tools__export, #tools__import {
+#tools__export, #tools__reset {
     color: white;
     background-color: #2a2a2a;
 }
