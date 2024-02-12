@@ -78,6 +78,7 @@ import((`./sheets/${sheetParam}.js`)).then(({rows}) => {
     updateProgression();
     addClickHandlers();
     importParam && importData(importParam);
+    document.title = `${document.title} - ${sheetParam}`;
 
     document.addEventListener('change', (event) => {
         const {name, value} = event.target;
