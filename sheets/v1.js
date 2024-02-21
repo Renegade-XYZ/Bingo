@@ -10,15 +10,13 @@ import {
     ANTIFIRE_SHIELD,
     ARCANE_SIGIL,
     ARCHERS_RING,
+    ARMADYL_CROSSBOW,
     ARMADYL_HILT,
     BALLISTA_LIMBS,
     BALLISTA_SPRING,
     BANDOS_HILT,
     BELLATOR_VESTIGE,
     BERSERKER_RING,
-    BLUDGEON_AXON,
-    BLUDGEON_CLAW,
-    BLUDGEON_SPINE,
     CHROMIUM_INGOT,
     CLAWS_OF_CALLISTO,
     CRAWS_BOW,
@@ -85,7 +83,7 @@ import {
     MASORI_CHAPS,
     MASORI_CRAFTING_KIT,
     MASORI_MASK,
-    MONKEY_TAIL,
+    MONKEY_TAIL, NIHIL_HORN,
     ODIUM_SHARD_1,
     ODIUM_SHARD_2,
     ODIUM_SHARD_3,
@@ -137,11 +135,13 @@ import {
     VOIDWAKER_HILT,
     WARRIOR_RING,
     WYVERN_VISAGE,
-    ZAMORAK_HILT
+    ZAMORAK_HILT,
+    ZARYTE_VAMBRACES
 } from "../helpers/Items.js";
 import {Tile} from "../helpers/Tile.js";
 import {CountableItem} from "../helpers/CountableItem.js";
 import {Variation} from "../helpers/Variation.js";
+import {Item} from "../helpers/Item.js";
 
 const cerberus = new Tile('Cerberus', 'https://oldschool.runescape.wiki/images/thumb/Cerberus.png/280px-Cerberus.png?47f4c', [
     new Variation(new CountableItem(PRIMORDIAL_CRYSTAL, 1), new CountableItem(DRAGON_BOOTS, 1)),
@@ -154,15 +154,43 @@ const voidwaker = new Tile('Complete Voidwaker', 'https://oldschool.runescape.wi
 ]);
 
 const justiciar = new Tile('Full Justiciar', 'https://oldschool.runescape.wiki/images/thumb/Justiciar_armour_equipped_male.png/130px-Justiciar_armour_equipped_male.png?17b57', [
-    new Variation(new CountableItem(JUSTICIAR_FACEGUARD), new CountableItem(JUSTICIAR_CHESTGUARD), new CountableItem(JUSTICIAR_LEGGUARDS))
+    new Variation(new CountableItem(JUSTICIAR_FACEGUARD), new CountableItem(JUSTICIAR_CHESTGUARD), new CountableItem(JUSTICIAR_LEGGUARDS)),
+    new Variation(new CountableItem(JUSTICIAR_FACEGUARD, 3)),
+    new Variation(new CountableItem(JUSTICIAR_CHESTGUARD, 3)),
+    new Variation(new CountableItem(JUSTICIAR_LEGGUARDS, 3)),
+    new Variation(new CountableItem(JUSTICIAR_FACEGUARD, 2), new CountableItem(JUSTICIAR_CHESTGUARD)),
+    new Variation(new CountableItem(JUSTICIAR_FACEGUARD, 2), new CountableItem(JUSTICIAR_LEGGUARDS)),
+    new Variation(new CountableItem(JUSTICIAR_CHESTGUARD, 2), new CountableItem(JUSTICIAR_FACEGUARD)),
+    new Variation(new CountableItem(JUSTICIAR_CHESTGUARD, 2), new CountableItem(JUSTICIAR_LEGGUARDS)),
+    new Variation(new CountableItem(JUSTICIAR_LEGGUARDS, 2), new CountableItem(JUSTICIAR_FACEGUARD)),
+    new Variation(new CountableItem(JUSTICIAR_LEGGUARDS, 2), new CountableItem(JUSTICIAR_CHESTGUARD))
 ]);
 
 const masori = new Tile('Full Masori', 'https://oldschool.runescape.wiki/images/thumb/Masori_armour_equipped_female.png/120px-Masori_armour_equipped_female.png?d7d2c', [
-    new Variation(new CountableItem(MASORI_MASK), new CountableItem(MASORI_BODY), new CountableItem(MASORI_CHAPS))
+    new Variation(new CountableItem(MASORI_MASK), new CountableItem(MASORI_BODY), new CountableItem(MASORI_CHAPS)),
+    new Variation(new CountableItem(MASORI_MASK, 3)),
+    new Variation(new CountableItem(MASORI_BODY, 3)),
+    new Variation(new CountableItem(MASORI_CHAPS, 3)),
+    new Variation(new CountableItem(MASORI_MASK, 2), new CountableItem(MASORI_BODY)),
+    new Variation(new CountableItem(MASORI_MASK, 2), new CountableItem(MASORI_CHAPS)),
+    new Variation(new CountableItem(MASORI_BODY, 2), new CountableItem(MASORI_MASK)),
+    new Variation(new CountableItem(MASORI_BODY, 2), new CountableItem(MASORI_CHAPS)),
+    new Variation(new CountableItem(MASORI_CHAPS, 2), new CountableItem(MASORI_MASK)),
+    new Variation(new CountableItem(MASORI_CHAPS, 2), new CountableItem(MASORI_BODY))
 ]);
 
 const torva = new Tile('Full Torva', 'https://oldschool.runescape.wiki/images/thumb/Torva_armour_equipped_male.png/130px-Torva_armour_equipped_male.png?a8f29', [
-    new Variation(new CountableItem(TORVA_FULL_HELM), new CountableItem(TORVA_PLATEBODY), new CountableItem(TORVA_PLATELEGS))
+    new Variation(new CountableItem(TORVA_FULL_HELM), new CountableItem(TORVA_PLATEBODY), new CountableItem(TORVA_PLATELEGS)),
+    new Variation(new CountableItem(NIHIL_HORN), new CountableItem(ZARYTE_VAMBRACES), new CountableItem(ARMADYL_CROSSBOW)),
+    new Variation(new CountableItem(TORVA_FULL_HELM, 3)),
+    new Variation(new CountableItem(TORVA_PLATEBODY, 3)),
+    new Variation(new CountableItem(TORVA_PLATELEGS, 3)),
+    new Variation(new CountableItem(TORVA_FULL_HELM, 2), new CountableItem(TORVA_PLATEBODY)),
+    new Variation(new CountableItem(TORVA_FULL_HELM, 2), new CountableItem(TORVA_PLATELEGS)),
+    new Variation(new CountableItem(TORVA_PLATEBODY, 2), new CountableItem(TORVA_FULL_HELM)),
+    new Variation(new CountableItem(TORVA_PLATEBODY, 2), new CountableItem(TORVA_PLATELEGS)),
+    new Variation(new CountableItem(TORVA_PLATELEGS, 2), new CountableItem(TORVA_FULL_HELM)),
+    new Variation(new CountableItem(TORVA_PLATELEGS, 2), new CountableItem(TORVA_PLATEBODY))
 ]);
 
 const wildernessRings = new Tile('Wilderness Rings', 'https://oldschool.runescape.wiki/images/thumb/Treasonous_ring_detail.png/200px-Treasonous_ring_detail.png?859ba', [
@@ -175,7 +203,16 @@ const wildernessShield = new Tile('Wilderness Shield', 'https://oldschool.runesc
 ]);
 
 const ancestral = new Tile('Full Ancestral', 'https://oldschool.runescape.wiki/images/thumb/Ancestral_robes_equipped_male.png/100px-Ancestral_robes_equipped_male.png?86902', [
-    new Variation(new CountableItem(ANCESTRAL_HAT), new CountableItem(ANCESTRAL_ROBE_TOP), new CountableItem(ANCESTRAL_ROBE_BOTTOM))
+    new Variation(new CountableItem(ANCESTRAL_HAT), new CountableItem(ANCESTRAL_ROBE_TOP), new CountableItem(ANCESTRAL_ROBE_BOTTOM)),
+    new Variation(new CountableItem(ANCESTRAL_HAT, 3)),
+    new Variation(new CountableItem(ANCESTRAL_ROBE_TOP, 3)),
+    new Variation(new CountableItem(ANCESTRAL_ROBE_BOTTOM, 3)),
+    new Variation(new CountableItem(ANCESTRAL_HAT, 2), new CountableItem(ANCESTRAL_ROBE_TOP)),
+    new Variation(new CountableItem(ANCESTRAL_HAT, 2), new CountableItem(ANCESTRAL_ROBE_BOTTOM)),
+    new Variation(new CountableItem(ANCESTRAL_ROBE_TOP, 2), new CountableItem(ANCESTRAL_HAT)),
+    new Variation(new CountableItem(ANCESTRAL_ROBE_TOP, 2), new CountableItem(ANCESTRAL_ROBE_BOTTOM)),
+    new Variation(new CountableItem(ANCESTRAL_ROBE_BOTTOM, 2), new CountableItem(ANCESTRAL_HAT)),
+    new Variation(new CountableItem(ANCESTRAL_ROBE_BOTTOM, 2), new CountableItem(ANCESTRAL_ROBE_TOP))
 ]);
 
 const megarare = new Tile('Any Megarare', 'https://oldschool.runescape.wiki/images/thumb/Tumeken%27s_shadow_%28uncharged%29_detail.png/180px-Tumeken%27s_shadow_%28uncharged%29_detail.png?24f11', [
@@ -284,10 +321,12 @@ const visage = new Tile('Any Visage', 'https://oldschool.runescape.wiki/images/t
     new Variation(new CountableItem(WYVERN_VISAGE), new CountableItem(ANTIFIRE_SHIELD)),
 ]);
 
-const bludgeon = new Tile('Complete Bludgeon', 'https://oldschool.runescape.wiki/images/thumb/Abyssal_bludgeon_detail.png/130px-Abyssal_bludgeon_detail.png?dd634', [
-    new Variation(new CountableItem(BLUDGEON_SPINE), new CountableItem(BLUDGEON_CLAW), new CountableItem(BLUDGEON_AXON))
+const bludgeon = new Tile('Gilded or Third Age', 'https://oldschool.runescape.wiki/images/thumb/3rd_age_pickaxe_detail.png/150px-3rd_age_pickaxe_detail.png?0bf61', [
+    new Variation(new CountableItem(new Item('Any Third Age'))),
+    new Variation(new CountableItem(new Item('Any Gilded')))
 ]);
 
+// https://oldschool.runescape.wiki/images/thumb/3rd_age_pickaxe_detail.png/150px-3rd_age_pickaxe_detail.png?0bf61
 export const rows = [
     [crystal, wildernessRings, goldenTench, wildernessShield, kits],
     [barrows, justiciar, godsword, spiritShield, jar],

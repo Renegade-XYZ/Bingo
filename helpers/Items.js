@@ -139,3 +139,6 @@ export const MAGMA_MUTAGEN = new Item('Magma Mutagen');
 export const ENHANCED_WEAPON_SEED = new Item('Enhanced Weapon Seed');
 export const DRAGON_PICKAXE_BROKEN = new Item('Dragon Pickaxe (broken)');
 export const ANTIFIRE_SHIELD = new Item('Antifire Shield');
+export const NIHIL_HORN = new Item('Nihil Horn');
+export const ZARYTE_VAMBRACES = new Item('Zaryte Vambraces');
+export const ARMADYL_CROSSBOW = new Item('Armadyl Crossbow');
