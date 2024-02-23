@@ -321,16 +321,16 @@ const visage = new Tile('Any Visage', 'https://oldschool.runescape.wiki/images/t
     new Variation(new CountableItem(WYVERN_VISAGE), new CountableItem(ANTIFIRE_SHIELD)),
 ]);
 
-const bludgeon = new Tile('Gilded or Third Age', 'https://oldschool.runescape.wiki/images/thumb/3rd_age_pickaxe_detail.png/150px-3rd_age_pickaxe_detail.png?0bf61', [
+const megarareClue = new Tile('Stupidly Lucky Clue', 'https://oldschool.runescape.wiki/images/thumb/3rd_age_pickaxe_detail.png/150px-3rd_age_pickaxe_detail.png?0bf61', [
     new Variation(new CountableItem(new Item('Any Third Age'))),
-    new Variation(new CountableItem(new Item('Any Gilded')))
+    new Variation(new CountableItem(new Item('Any Gilded'))),
+    new Variation(new CountableItem(new Item('Blood Hound'))),
 ]);
 
-// https://oldschool.runescape.wiki/images/thumb/3rd_age_pickaxe_detail.png/150px-3rd_age_pickaxe_detail.png?0bf61
 export const rows = [
     [crystal, wildernessRings, goldenTench, wildernessShield, kits],
     [barrows, justiciar, godsword, spiritShield, jar],
     [wildernessWeapon, dt2ring, masori, venatorBow, dragonTools],
     [megarare, visage, voidwaker, ancestral, ballista],
-    [minigamePet, zulrah, cerberus, bludgeon, torva]
+    [minigamePet, zulrah, cerberus, megarareClue, torva]
 ];
