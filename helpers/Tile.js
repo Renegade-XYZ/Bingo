@@ -14,19 +14,12 @@ export class Tile {
         let highestPercentage = 0;
 
         for (const {countableItems} of this.variations) {
-            const maxPoints = countableItems.length * 2;
+            let maxPoints = 0;
             let gainedPoints = 0;
 
             for (const {item, requiredAmount} of countableItems) {
-                const obtainedAmount = localStorage.getItem(item.id) | 0;
-
-                if (obtainedAmount > 0) {
-                    gainedPoints++;
-                }
-
-                if (obtainedAmount >= requiredAmount) {
-                    gainedPoints++;
-                }
+                maxPoints += requiredAmount;
+                gainedPoints += localStorage.getItem(item.id) | 0;
             }
 
             const percentage = Math.floor(100 * gainedPoints / maxPoints);
