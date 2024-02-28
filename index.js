@@ -108,8 +108,10 @@ import((`./sheets/${sheetParam}.js`)).then(({rows}) => {
 
     document.getElementById('tools__export').addEventListener('click', () => {
         const searchParams = new URLSearchParams(location.search);
+        const json = JSON.stringify(localStorage, (key, val) => val ? val : undefined);
         searchParams.set('sheet', sheetParam);
-        searchParams.set('import', btoa(JSON.stringify(localStorage)));
+        searchParams.set('import', btoa(json));
+        console.log(encodeURIComponent(json).length, btoa.length);
 
         navigator.clipboard.writeText(`${location.origin}${location.pathname}?${searchParams}`)
             .then(() => alert('Bingo data copied to clipboard!'), () => alert('Failed to export!'));
