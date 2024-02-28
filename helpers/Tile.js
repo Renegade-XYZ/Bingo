@@ -19,7 +19,7 @@ export class Tile {
 
             for (const {item, requiredAmount} of countableItems) {
                 maxPoints += requiredAmount;
-                gainedPoints += localStorage.getItem(item.id) | 0;
+                gainedPoints += Math.min(localStorage.getItem(item.id) | 0, requiredAmount);
             }
 
             const percentage = Math.floor(100 * gainedPoints / maxPoints);
