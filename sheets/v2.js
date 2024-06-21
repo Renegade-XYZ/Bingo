@@ -1,7 +1,22 @@
 import {Tile} from '../helpers/Tile.js';
 import {Variation} from '../helpers/Variation.js';
 import {CountableItem} from '../helpers/CountableItem.js';
-import {VOIDWAKER_BLADE, VOIDWAKER_GEM, VOIDWAKER_HILT} from '../helpers/Items.js';
+import {
+    JAR_OF_CHEMICALS,
+    JAR_OF_DARKNESS,
+    JAR_OF_DECAY,
+    JAR_OF_DIRT,
+    JAR_OF_DREAMS,
+    JAR_OF_EYES,
+    JAR_OF_MIASMA,
+    JAR_OF_SAND, JAR_OF_SMOKE, JAR_OF_SOULS, JAR_OF_SPIRITS, JAR_OF_STONE, JAR_OF_SWAMP,
+    SCYTHE_OF_VITUR,
+    TUMEKENS_SHADOW,
+    TWISTED_BOW,
+    VOIDWAKER_BLADE,
+    VOIDWAKER_GEM,
+    VOIDWAKER_HILT
+} from '../helpers/Items.js';
 
 const toa = new Tile('Tombs of Amascut', 'https://oldschool.runescape.wiki/images/thumb/Tombs_of_Amascut.png/1920px-Tombs_of_Amascut.png', []);
 const tob = new Tile('Theatre of Blood', 'https://oldschool.runescape.wiki/images/Theatre_of_Blood_logo.png', []);
@@ -13,7 +28,11 @@ const graardor = new Tile('General Graardor', 'https://oldschool.runescape.wiki/
 const tsutsaroth = new Tile('K\'ril Tsutsaroth', 'https://oldschool.runescape.wiki/images/thumb/K%27ril_Tsutsaroth.png/1280px-K%27ril_Tsutsaroth.png', []);
 const zilyana = new Tile('Commander Zilyana', 'https://oldschool.runescape.wiki/images/Commander_Zilyana.png', []);
 const kree = new Tile('Kree\'arra', 'https://oldschool.runescape.wiki/images/thumb/Kree%27arra.png/280px-Kree%27arra.png', []);
-const megarare = new Tile('Raid Megarare', 'https://oldschool.runescape.wiki/images/Coins_detail.png', []);
+const megarare = new Tile('Raid Megarare', 'https://oldschool.runescape.wiki/images/Coins_detail.png', [
+    new Variation(new CountableItem(TUMEKENS_SHADOW)),
+    new Variation(new CountableItem(TWISTED_BOW)),
+    new Variation(new CountableItem(SCYTHE_OF_VITUR))
+]);
 const gauntlet = new Tile('The Gauntlet', 'https://oldschool.runescape.wiki/images/Crystalline_Hunllef.png', []);
 const biscape = new Tile('BiS Cape', 'https://oldschool.runescape.wiki/images/thumb/Dizana%27s_quiver_%28uncharged%29_detail.png/1280px-Dizana%27s_quiver_%28uncharged%29_detail.png', []);
 const voidwaker = new Tile('Complete Voidwaker', 'https://oldschool.runescape.wiki/images/thumb/Voidwaker_detail.png/1280px-Voidwaker_detail.png', [
@@ -29,7 +48,21 @@ const q4 = new Tile('', '', []);
 const barrows = new Tile('Barrows', 'https://oldschool.runescape.wiki/images/Strange_Old_Man.png', []);
 const q5 = new Tile('', '', []);
 const corp = new Tile('Corporeal Beast', 'https://oldschool.runescape.wiki/images/thumb/Corporeal_Beast.png/1280px-Corporeal_Beast.png', []);
-const jar = new Tile('Any Jar', 'https://oldschool.runescape.wiki/images/Jarr.png', []);
+const jar = new Tile('Any Jar', 'https://oldschool.runescape.wiki/images/Jarr.png', [
+    new Variation(new CountableItem(JAR_OF_CHEMICALS)),
+    new Variation(new CountableItem(JAR_OF_DARKNESS)),
+    new Variation(new CountableItem(JAR_OF_DECAY)),
+    new Variation(new CountableItem(JAR_OF_DIRT)),
+    new Variation(new CountableItem(JAR_OF_DREAMS)),
+    new Variation(new CountableItem(JAR_OF_EYES)),
+    new Variation(new CountableItem(JAR_OF_MIASMA)),
+    new Variation(new CountableItem(JAR_OF_SAND)),
+    new Variation(new CountableItem(JAR_OF_SMOKE)),
+    new Variation(new CountableItem(JAR_OF_SOULS)),
+    new Variation(new CountableItem(JAR_OF_SPIRITS)),
+    new Variation(new CountableItem(JAR_OF_STONE)),
+    new Variation(new CountableItem(JAR_OF_SWAMP))
+]);
 
 export const rows = [
     [cox, tob, toa, muspah, megarare],
