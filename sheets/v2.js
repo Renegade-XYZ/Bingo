@@ -1,59 +1,40 @@
-import {Tile} from "../helpers/Tile.js";
+import {Tile} from '../helpers/Tile.js';
+import {Variation} from '../helpers/Variation.js';
+import {CountableItem} from '../helpers/CountableItem.js';
+import {VOIDWAKER_BLADE, VOIDWAKER_GEM, VOIDWAKER_HILT} from '../helpers/Items.js';
 
-const cerberus = new Tile('Cerberus', 'https://oldschool.runescape.wiki/images/thumb/Cerberus.png/280px-Cerberus.png?47f4c', []);
-
-const voidwaker = new Tile('Complete Voidwaker', 'https://oldschool.runescape.wiki/images/thumb/Voidwaker_detail.png/150px-Voidwaker_detail.png?01835', []);
-
-const justiciar = new Tile('Full Justiciar', 'https://oldschool.runescape.wiki/images/thumb/Justiciar_armour_equipped_male.png/130px-Justiciar_armour_equipped_male.png?17b57', []);
-
-const masori = new Tile('Full Masori', 'https://oldschool.runescape.wiki/images/thumb/Masori_armour_equipped_female.png/120px-Masori_armour_equipped_female.png?d7d2c', []);
-
-const torva = new Tile('Full Torva', 'https://oldschool.runescape.wiki/images/thumb/Torva_armour_equipped_male.png/130px-Torva_armour_equipped_male.png?a8f29', []);
-
-const wildernessRings = new Tile('Wilderness Rings', 'https://oldschool.runescape.wiki/images/thumb/Treasonous_ring_detail.png/200px-Treasonous_ring_detail.png?859ba', []);
-
-const wildernessShield = new Tile('Wilderness Shield', 'https://oldschool.runescape.wiki/images/thumb/Malediction_ward_detail.png/130px-Malediction_ward_detail.png?c708e', []);
-
-const ancestral = new Tile('Full Ancestral', 'https://oldschool.runescape.wiki/images/thumb/Ancestral_robes_equipped_male.png/100px-Ancestral_robes_equipped_male.png?86902', []);
-
-const megarare = new Tile('Any Megarare', 'https://oldschool.runescape.wiki/images/thumb/Tumeken%27s_shadow_%28uncharged%29_detail.png/180px-Tumeken%27s_shadow_%28uncharged%29_detail.png?24f11', []);
-
-const dt2ring = new Tile('DT2 Ring from Scratch', 'https://oldschool.runescape.wiki/images/thumb/Magus_ring_detail.png/150px-Magus_ring_detail.png?7d63e', []);
-
-const godsword = new Tile('Godsword From Scratch', 'https://oldschool.runescape.wiki/images/thumb/Zamorak_godsword_detail.png/140px-Zamorak_godsword_detail.png?f52af', []);
-
-const wildernessWeapon = new Tile('Wilderness Weapon from Scratch', 'https://oldschool.runescape.wiki/images/thumb/Ursine_chainmace_detail.png/170px-Ursine_chainmace_detail.png?115b4', []);
-
-const crystal = new Tile('Full Crystal', 'https://oldschool.runescape.wiki/images/thumb/Crystal_armour_equipped_male.png/101px-Crystal_armour_equipped_male.png?dcf7b', []);
-
-const barrows = new Tile('Full Barrows', 'https://oldschool.runescape.wiki/images/thumb/Dharok%27s_armour_equipped_male.png/150px-Dharok%27s_armour_equipped_male.png?3d05c', []);
-
-const ballista = new Tile('Ballisa from Scratch', 'https://oldschool.runescape.wiki/images/thumb/Heavy_ballista_detail.png/200px-Heavy_ballista_detail.png?04867', []);
-
-const minigamePet = new Tile('Minigame Pet', 'https://oldschool.runescape.wiki/images/thumb/Penance_Pet.png/290px-Penance_Pet.png?56343', []);
-
-const spiritShield = new Tile('Spirit Shield from Scratch', 'https://oldschool.runescape.wiki/images/thumb/Elysian_spirit_shield_detail.png/120px-Elysian_spirit_shield_detail.png?e83cd', []);
-
-const venatorBow = new Tile('Venator Bow', 'https://oldschool.runescape.wiki/images/thumb/Venator_bow_detail.png/130px-Venator_bow_detail.png?6167b', []);
-
-const zulrah = new Tile('Zulrah', 'https://oldschool.runescape.wiki/images/thumb/Zulrah_%28serpentine%29.png/250px-Zulrah_%28serpentine%29.png?29a54', []);
-
-const goldenTench = new Tile('Golden Tench', 'https://oldschool.runescape.wiki/images/thumb/Golden_tench_detail.png/130px-Golden_tench_detail.png?27700', []);
-
-const dragonTools = new Tile('Dragon Tools', 'https://oldschool.runescape.wiki/images/thumb/Dragon_pickaxe_detail.png/130px-Dragon_pickaxe_detail.png?4f4ee', []);
-
-const jar = new Tile('Any Jar', 'https://oldschool.runescape.wiki/images/thumb/Jar_of_souls_detail.png/90px-Jar_of_souls_detail.png?e6cf8', []);
-
-const kits = new Tile('Sweat Kits', 'https://oldschool.runescape.wiki/images/thumb/Sanguine_ornament_kit_detail.png/120px-Sanguine_ornament_kit_detail.png?939b9', []);
-
-const visage = new Tile('Any Visage', 'https://oldschool.runescape.wiki/images/thumb/Draconic_visage_detail.png/130px-Draconic_visage_detail.png?6edab', []);
-
-const megarareClue = new Tile('Stupidly Lucky Clue', 'https://oldschool.runescape.wiki/images/thumb/3rd_age_pickaxe_detail.png/150px-3rd_age_pickaxe_detail.png?0bf61', []);
+const toa = new Tile('Tombs of Amascut', 'https://oldschool.runescape.wiki/images/thumb/Tombs_of_Amascut.png/1920px-Tombs_of_Amascut.png', []);
+const tob = new Tile('Theatre of Blood', 'https://oldschool.runescape.wiki/images/Theatre_of_Blood_logo.png', []);
+const cox = new Tile('Chambers of Xeric', 'https://oldschool.runescape.wiki/images/Chambers_of_Xeric_logo.png', []);
+const nex = new Tile('Nex', 'https://oldschool.runescape.wiki/images/thumb/Nex.png/1280px-Nex.png', []);
+const nightmare = new Tile('The Nightmare of Ashihama', 'https://oldschool.runescape.wiki/images/The_Nightmare.png', []);
+const muspah = new Tile('Phantom Muspah', 'https://oldschool.runescape.wiki/images/thumb/Phantom_Muspah_%28ranged%29.png/1280px-Phantom_Muspah_%28ranged%29.png', []);
+const graardor = new Tile('General Graardor', 'https://oldschool.runescape.wiki/images/General_Graardor.png', []);
+const tsutsaroth = new Tile('K\'ril Tsutsaroth', 'https://oldschool.runescape.wiki/images/thumb/K%27ril_Tsutsaroth.png/1280px-K%27ril_Tsutsaroth.png', []);
+const zilyana = new Tile('Commander Zilyana', 'https://oldschool.runescape.wiki/images/Commander_Zilyana.png', []);
+const kree = new Tile('Kree\'arra', 'https://oldschool.runescape.wiki/images/thumb/Kree%27arra.png/280px-Kree%27arra.png', []);
+const megarare = new Tile('Raid Megarare', 'https://oldschool.runescape.wiki/images/Coins_detail.png', []);
+const gauntlet = new Tile('The Gauntlet', 'https://oldschool.runescape.wiki/images/Crystalline_Hunllef.png', []);
+const biscape = new Tile('BiS Cape', 'https://oldschool.runescape.wiki/images/thumb/Dizana%27s_quiver_%28uncharged%29_detail.png/1280px-Dizana%27s_quiver_%28uncharged%29_detail.png', []);
+const voidwaker = new Tile('Complete Voidwaker', 'https://oldschool.runescape.wiki/images/thumb/Voidwaker_detail.png/1280px-Voidwaker_detail.png', [
+    new Variation(new CountableItem(VOIDWAKER_HILT), new CountableItem(VOIDWAKER_GEM), new CountableItem(VOIDWAKER_BLADE))
+]);
+const moonsofperil = new Tile('Moons of Peril', 'https://oldschool.runescape.wiki/images/Eyatlalli.png', []);
+const pet = new Tile('Any Pet', 'https://oldschool.runescape.wiki/images/Bob_the_Jagex_cat.png', []);
+const dhideboots = new Tile('Blessed Boots', 'https://oldschool.runescape.wiki/images/Zamorak_d%27hide_boots_detail.png', []);
+const dks = new Tile('Dagannoth Kings', 'https://oldschool.runescape.wiki/images/thumb/Dagannoth_Prime.png/1024px-Dagannoth_Prime.png', []);
+const zalcano = new Tile('Zalcano', 'https://oldschool.runescape.wiki/images/thumb/Zalcano.png/800px-Zalcano.png', []);
+const dt2 = new Tile('Desert Treasure II', 'https://oldschool.runescape.wiki/images/thumb/Desert_Treasure_II_logo.png/1920px-Desert_Treasure_II_logo.png', []);
+const q4 = new Tile('', '', []);
+const barrows = new Tile('Barrows', 'https://oldschool.runescape.wiki/images/Strange_Old_Man.png', []);
+const q5 = new Tile('', '', []);
+const corp = new Tile('Corporeal Beast', 'https://oldschool.runescape.wiki/images/thumb/Corporeal_Beast.png/1280px-Corporeal_Beast.png', []);
+const jar = new Tile('Any Jar', 'https://oldschool.runescape.wiki/images/Jarr.png', []);
 
 export const rows = [
-    [],
-    [],
-    [],
-    [],
-    []
+    [cox, tob, toa, muspah, megarare],
+    [nex, graardor, tsutsaroth, zilyana, kree],
+    [nightmare, gauntlet, biscape, voidwaker, moonsofperil],
+    [pet, dhideboots, dks, zalcano, dt2],
+    [q4, barrows, q5, corp, jar]
 ];
