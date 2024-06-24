@@ -9,7 +9,7 @@ export class Item {
     }
 
     toString() {
-        return `Item[id=${this.id},name=${this.name}]`;
+        return this.name;
     }
 
     toJSON() {

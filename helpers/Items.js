@@ -30,6 +30,7 @@ export const BLOODHOUND = new Item('Bloodhound');
 export const BLUDGEON_AXON = new Item('Bludgeon Axon');
 export const BLUDGEON_CLAW = new Item('Bludgeon Claw');
 export const BLUDGEON_SPINE = new Item('Bludgeon Spine');
+export const BOLT_RACK = new Item('Bolt rack');
 export const BUTCH = new Item('Butch');
 export const CALLISTO_CUB = new Item('Callisto cub');
 export const CHOMPY_CHICK = new Item('Chompy chick');
