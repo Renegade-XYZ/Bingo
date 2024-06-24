@@ -3,11 +3,13 @@ export class Tile {
     name = '';
     image = '';
     variations = [];
+    description = '';
 
-    constructor(name, image, variations) {
+    constructor(name, image, variations, description = '') {
         this.name = name;
         this.image = image;
         this.variations = variations;
+        this.description = description;
     }
 
     getProgression() {

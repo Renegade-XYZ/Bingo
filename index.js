@@ -1,6 +1,7 @@
 const boardElement = document.getElementById('sheet');
 const detailsVariationsElement = document.getElementById('details__variations');
 const detailsTitleElement = document.getElementById('details__title');
+const detailsDescriptionElement = document.getElementById('details__description');
 const tileElements = Array.from(boardElement.getElementsByClassName('tile')).slice(5);
 
 const params = new URLSearchParams(location.search);
@@ -31,6 +32,7 @@ import((`./sheets/${sheetParam}.js`)).then(({rows}) => {
 
         tileElement.addEventListener('click', () => {
             detailsTitleElement.innerText = tile.name;
+            detailsDescriptionElement.innerText = tile.description;
             detailsVariationsElement.innerHTML = '';
 
             for (let i = 0; i < tile.variations.length; i++) {

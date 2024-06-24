@@ -68,14 +68,9 @@ body {
     padding: 0 1em;
 }
 
-#details__subtitle--none,
 #details__subtitle--one,
 #details__subtitle--many {
     display: none;
-}
-
-#details:not(:has(.variation)) #details__subtitle--none {
-    display: initial;
 }
 
 #details:has(.variation):not(:has(.variation:nth-child(2))) #details__subtitle--one {
