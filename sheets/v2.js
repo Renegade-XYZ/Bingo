@@ -15,7 +15,7 @@ import {
     BELLATOR_VESTIGE,
     BERSERKER_RING, BLOODHOUND,
     BUTCH,
-    CALLISTO_CUB, CHOMPY_CHICK,
+    CALLISTO_CUB,
     CHROMIUM_INGOT,
     CRYSTAL_ARMOUR_SEED,
     CRYSTAL_TOOL_SEED,
@@ -135,7 +135,7 @@ const megarare = new Tile('Raid Megarare', 'https://oldschool.runescape.wiki/ima
 ]);
 
 const gauntlet = new Tile('The Gauntlet', 'https://oldschool.runescape.wiki/images/Crystalline_Hunllef.png', [
-    new Variation(new CountableItem(CRYSTAL_ARMOUR_SEED, 6)),
+    new Variation(new CountableItem(CRYSTAL_ARMOUR_SEED, 4)),
     new Variation(new CountableItem(ENHANCED_WEAPON_SEED, 1))
 ]);
 
@@ -162,7 +162,6 @@ const pet = new Tile('Any Pet', 'https://oldschool.runescape.wiki/images/Bob_the
     new Variation(new CountableItem(BLOODHOUND)),
     new Variation(new CountableItem(BUTCH)),
     new Variation(new CountableItem(CALLISTO_CUB)),
-    new Variation(new CountableItem(CHOMPY_CHICK)),
     new Variation(new CountableItem(GIANT_SQUIRREL)),
     new Variation(new CountableItem(HELLPUPPY)),
     new Variation(new CountableItem(HERBI)),
