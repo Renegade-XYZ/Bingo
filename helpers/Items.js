@@ -212,3 +212,5 @@ export const ZALCANO_SHARD = new Item('Zalcano shard');
 export const ZAMORAK_DHIDE_BOOTS = new Item('Zamorak d\'hide boots');
 export const ZAMORAK_HILT = new Item('Zamorak Hilt');
 export const ZARYTE_VAMBRACES = new Item('Zaryte Vambraces');
+export const BONE_CLAW = new Item('Bone claw');
+export const TORMENTED_SYNAPSE = new Item('Tormented synapse');
