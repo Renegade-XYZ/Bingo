@@ -274,9 +274,8 @@ const barrows = new Tile('Barrows', 'https://oldschool.runescape.wiki/images/Str
 ], 'Everything that\'s on the log counts, except Bolt racks');
 
 const wgs = new Tile('While Guthix Sleeps', 'https://oldschool.runescape.wiki/images/thumb/While_Guthix_Sleeps_logo.png/1920px-While_Guthix_Sleeps_logo.png', [
-    new Variation(new CountableItem(TORMENTED_SYNAPSE, 2)),
-    new Variation(new CountableItem(BONE_CLAW, 2)),
-    new Variation(new CountableItem(TORMENTED_SYNAPSE), new CountableItem(BONE_CLAW))
+    new Variation(new CountableItem(TORMENTED_SYNAPSE)),
+    new Variation(new CountableItem(BONE_CLAW))
 ]);
 
 const corp = new Tile('Corporeal Beast', 'https://oldschool.runescape.wiki/images/thumb/Corporeal_Beast.png/1280px-Corporeal_Beast.png', [
