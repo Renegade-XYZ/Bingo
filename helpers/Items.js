@@ -214,3 +214,41 @@ export const ZAMORAK_HILT = new Item('Zamorak Hilt');
 export const ZARYTE_VAMBRACES = new Item('Zaryte Vambraces');
 export const BONE_CLAW = new Item('Bone claw');
 export const TORMENTED_SYNAPSE = new Item('Tormented synapse');
+export const DRAGON_HUNTER_WAND = new Item('Dragon hunter wand');
+export const TOME_OF_EARTH = new Item('Tome of earth (empty)');
+export const HUEYCOATL_HIDE = new Item('Hueycoatl hide');
+export const SUNFIRE_FANATIC_HELM = new Item('Sunfire fanatic helm');
+export const SUNFIRE_FANATIC_CUIRASS = new Item('Sunfire fanatic cuirass');
+export const SUNFIRE_FANATIC_CHAUSSES = new Item('Sunfire fanatic chausses');
+
+export const BLOOD_MOON_HELM = new Item('Blood moon helm');
+export const BLOOD_MOON_CHESTPLATE = new Item('Blood moon chestplate');
+export const BLOOD_MOON_TASSETS = new Item('Blood moon tassets');
+export const DUAL_MACUAHUITL = new Item('Dual macuahuitl');
+
+export const BLUE_MOON_HELM = new Item('Blue moon helm');
+export const BLUE_MOON_CHESTPLATE = new Item('Blue moon chestplate');
+export const BLUE_MOON_TASSETS = new Item('Blue moon tassets');
+export const BLUE_MOON_SPEAR = new Item('Blue moon spear');
+
+export const ECLIPSE_MOON_HELM = new Item('Eclipse moon helm');
+export const ECLIPSE_MOON_CHESTPLATE = new Item('Eclipse moon chestplate');
+export const ECLIPSE_MOON_TASSETS = new Item('Eclipse moon tassets');
+export const ECLIPSE_ATLATL = new Item('Eclipse atlatl');
+
+export const HILL_GIANT_CLUB = new Item('Hill giant club');
+export const BRYOPHYTAS_ESSENCE = new Item('Bryophyta\'s essence');
+
+export const UNCUT_ONYX = new Item('Uncut onyx');
+export const CUT_ONYX = new Item('Onyx');
+export const ZENYTE_SHARD = new Item('Zenyte shard');
+export const ARAXYTE_FANG = new Item('Araxyte fang');
+
+export const NOXIOUS_POINT = new Item('Noxious point');
+export const NOXIOUS_BLADE = new Item('Noxious blade');
+export const NOXIOUS_POMMEL = new Item('Noxious pommel');
+export const NID = new Item('Nid');
+export const HUBERTE = new Item('Huberte');
+export const MOXI = new Item('Moxi');
+export const JAR_OF_VENOM = new Item('Jar of venom');
+

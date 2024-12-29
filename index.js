@@ -5,7 +5,7 @@ const detailsDescriptionElement = document.getElementById('details__description'
 const tileElements = Array.from(boardElement.getElementsByClassName('tile')).slice(5);
 
 const params = new URLSearchParams(location.search);
-const sheetParam = params.get('sheet') ?? 'v1';
+const sheetParam = params.get('sheet') ?? 'v4';
 const importParam = params.get('import') ?? '';
 
 import((`./sheets/${sheetParam}.js`)).then(({rows}) => {

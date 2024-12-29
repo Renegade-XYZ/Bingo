@@ -255,7 +255,7 @@ const barrows = new Tile('Full Barrows', 'https://oldschool.runescape.wiki/image
     new Variation(new CountableItem(AHRIMS_STAFF), new CountableItem(AHRIMS_HOOD), new CountableItem(AHRIMS_ROBETOP), new CountableItem(AHRIMS_ROBE_SKIRT)),
 ]);
 
-const ballista = new Tile('Ballisa from Scratch', 'https://oldschool.runescape.wiki/images/thumb/Heavy_ballista_detail.png/200px-Heavy_ballista_detail.png?04867', [
+const ballista = new Tile('Ballista from Scratch', 'https://oldschool.runescape.wiki/images/thumb/Heavy_ballista_detail.png/200px-Heavy_ballista_detail.png?04867', [
     new Variation(new CountableItem(BALLISTA_SPRING), new CountableItem(BALLISTA_LIMBS), new CountableItem(MONKEY_TAIL), new CountableItem(HEAVY_FRAME)),
     new Variation(new CountableItem(BALLISTA_SPRING), new CountableItem(BALLISTA_LIMBS), new CountableItem(MONKEY_TAIL), new CountableItem(LIGHT_FRAME))
 ]);
