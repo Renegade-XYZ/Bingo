@@ -15,13 +15,11 @@ export class Tile {
     getProgression() {
         let highestPercentage = 0;
 
-        for (const {countableItems} of this.variations) {
-            let maxPoints = 0;
+        for (const {maxPoints, countableItems} of this.variations) {
             let gainedPoints = 0;
 
             for (const {item, requiredAmount} of countableItems) {
-                maxPoints += requiredAmount;
-                gainedPoints += Math.min(localStorage.getItem(item.id) | 0, requiredAmount);
+                gainedPoints += isNaN(requiredAmount) ? localStorage.getItem(item.id) | 0 : Math.min(localStorage.getItem(item.id) | 0, requiredAmount);
             }
 
             const percentage = Math.floor(100 * gainedPoints / maxPoints);
