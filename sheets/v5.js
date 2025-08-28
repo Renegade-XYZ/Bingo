@@ -341,6 +341,7 @@ const nightmare = new Tile('Nightmare', 'https://oldschool.runescape.wiki/images
 const nex = new Tile('Nex', 'https://oldschool.runescape.wiki/images/thumb/Nex.png/270px-Nex.png?2a1b3', [
     new Variation(new CountableItem(NEXLING)),
     new Variation(new CountableItem(NIHIL_HORN)),
+    new Variation(new CountableItem(ANCIENT_HILT)),
     new Variation(new CountableItem(ZARYTE_VAMBRACES)),
     new Variation(new CountableItem(TORVA_FULL_HELM)),
     new Variation(new CountableItem(TORVA_PLATEBODY)),
