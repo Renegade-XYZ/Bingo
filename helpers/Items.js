@@ -300,3 +300,4 @@ export const DINHS_BULWARK = new Item('Dinh\'s bulwark');
 export const DRAGON_CLAWS = new Item('Dragon claws');
 export const ELDER_MAUL = new Item('Elder maul');
 export const KODAI_INSIGNIA = new Item('Kodai insignia');
+export const METAMORPHIC_DUST = new Item('Metamorphic dust');

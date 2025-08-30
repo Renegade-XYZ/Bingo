@@ -99,6 +99,7 @@ import {
   OATHPLATE_CHEST,
   OATHPLATE_LEGS,
   SUNFIRE_FANATIC_HELM,
+  METAMORPHIC_DUST,
   SUNFIRE_FANATIC_CUIRASS,
   SUNFIRE_FANATIC_CHAUSSES,
   ENHANCED_WEAPON_SEED,
@@ -296,6 +297,7 @@ const cox = new Tile('Chambers of Xeric', 'https://oldschool.runescape.wiki/imag
     new Variation(new CountableItem(DRAGON_HUNTER_CROSSBOW)),
     new Variation(new CountableItem(DINHS_BULWARK)),
     new Variation(new CountableItem(DRAGON_CLAWS)),
+    new Variation(new CountableItem(METAMORPHIC_DUST))
 ]);
 
 const toa = new Tile('Tombs of Amascut', 'https://oldschool.runescape.wiki/images/thumb/Tumeken%27s_Guardian_%28follower%29.png/250px-Tumeken%27s_Guardian_%28follower%29.png?7583d', [
